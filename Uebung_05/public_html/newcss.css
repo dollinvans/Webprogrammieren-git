@@ -2,8 +2,16 @@
     font-family: Arial;
 }
 
+
 #en{
-    display: none;
+    display: none; 
+}
+
+#icon{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    margin-left: 5px;
 }
 
 button{
@@ -45,4 +53,10 @@ button{
     position: relative;
     margin-left: 10px;
     margin-top: 10px;
+}
+
+#box {
+    padding: 5px;
+    display: none;
+     left: 0;
 }

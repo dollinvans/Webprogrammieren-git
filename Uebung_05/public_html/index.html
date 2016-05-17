@@ -11,54 +11,61 @@
         <script src="multilingual.js" language="javascript"  type="text/javascript"></script>
 
     </head>
-    <body>
+    <body>     
         <h1 class="wechsel">Registration</h1>
         <h1 class="wechsel" id="en">Registrierung</h1>
-        <form id="kontaktformular"> 
-            <div  onclick="changeLang()">
-                <img id="flagge" src="icon/Germany-icon.png" alt="DE" />
-                <img style ="display: none" id="flagge" src="icon/United-Kingdom-icon.png" alt="EN" />
+        <form id="kontaktformular" > 
+            <div>
+                <img id="flagge" src="icon/Germany-icon.png" alt="DE" onclick="changeLang()"/>
+                <img style ="display: none" id="flagge" src="icon/United-Kingdom-icon.png" alt="EN" onclick="changeLang2()" />
             </div>
             <p class="wechsel">Please fill out the form.</p>
             <p class="wechsel" id="en">Bitte füllen Sie das Formular aus! </p>
-            <fieldset>
-                <legend class="wechsel">Login Details</legend>
-                <legend class="wechsel" id="en">Anmelde-Details</legend>
-                <label class="wechsel">Username* </label>
-                <label class="wechsel" id="en">Nutzername* </label>
-                <input name="Anrede"  value="" type="text"/>
-                <br />
-                <label class="wechsel">Password* </label>
-                <label class="wechsel" id="en">Passwort* </label>
-                <input id ="pw1"  type="password"/>
-                <br />
-                <label class="wechsel">retype Password* </label>
-                <label class="wechsel" id="en">Wiederholung Passwort*</label>
-                <input id ="pw2" type="password" onblur=" return pruefen(this)"/>
-                <br />
-            </fieldset>
-            <fieldset>
-                <legend class="wechsel">User Data</legend>
-                <legend class="wechsel" id="en">Nutzer Daten</legend>
-                <label class="wechsel">First Name* </label>
-                <label class="wechsel" id="en">Vorname* </label>
-                <input name="Anrede"  value="" type="text"/>
-                <br />
-                <label class="wechsel">Middle Name </label>
-                <label class="wechsel" id="en">Namenszusatz</label>
-                <input id ="pw1"  type="password"/>
-                <br />
-                <label class="wechsel">Last Name* </label>
-                <label class="wechsel" id="en">Nachname* </label>
-                <input id ="pw2" type="password" onblur=" return pruefen(this)"/>
-                <br />
-                <label>Email* </label>         
-                <input id ="pw2" type="password" onblur=" return pruefen(this)"/>
-                <br />
-            </fieldset>            
-            <button type="button" onclick="submitcheck()">Submit</button>
-            <button type="button" style ="display: none"  onclick="submitcheck()">Prüfen</button>                   
+            <div onclick="slidedw()"> >>> </div>
+            <div id="box">
+                <fieldset>
+                    <legend class="wechsel">Login Details</legend>
+                    <legend class="wechsel" id="en">Anmelde-Details</legend>
+                    <label class="wechsel">Username* </label>
+                    <label class="wechsel" id="en">Nutzername* </label>
+                    <input id="nutzername" type="text"/>
+                    <br />
+                    <label class="wechsel">Password* </label>
+                    <label class="wechsel" id="en">Passwort* </label>
+                    <input id ="pw1"  type="password"/>
+                    <br />
+                    <label class="wechsel">retype Password* </label>
+                    <span id="en" class="wechsel"><label id="pw1">Wiederholung Passwort*</label></span>
+                    <input id ="pw2" type="password" onblur=" return pruefenpw(this)"/>
+                    <br />
+                </fieldset>
+                <fieldset>
+                    <legend class="wechsel">User Data</legend>
+                    <legend class="wechsel" id="en">Nutzer Daten</legend>
+                    <label class="wechsel">First Name* </label>
+                    <label class="wechsel" id="en">Vorname* </label>
+                    <input id="vorname" type="text"/>
+                    <br />
+                    <label class="wechsel">Middle Name </label>
+                    <label class="wechsel" id="en">Namenszusatz</label>
+                    <input id="zusatz"   type="text"/>
+                    <br />
+                    <label class="wechsel">Last Name* </label>
+                    <label class="wechsel" id="en">Nachname* </label> 
+                    <input id="nachname"   type="text"/>
+                    <br />              
+                    <label>Email*</label>        
+                    <input id="email" type="text" name="mail" onblur="pruefenmail()" >
+                    <span id="icon"></span>
+                    <br/>
+                </fieldset>
+                <button type="button" onclick="absenden()">Submit</button>
+                <button type="button" style ="display: none" onclick="absenden()">Abschicken</button> 
+                <span id ="error"></span>
+            </div>        
         </form>
+
+
     </body>
 </html>
 
