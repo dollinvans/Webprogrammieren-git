@@ -1,12 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Übung 05</title>
+        <title>Uebnug 05</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="newcss.css">
+        <script src="newjavascript.js" language="javascript"  type="text/javascript"></script>
+        <script src="multilingual.js" language="javascript"  type="text/javascript"></script>
+
     </head>
     <body>
-        <div>TODO write content</div>
+        <h1 class="wechsel">Registration</h1>
+        <h1 class="wechsel" id="en">Registrierung</h1>
+        <form id="kontaktformular"> 
+            <div  onclick="changeLang()">
+                <img id="flagge" src="icon/Germany-icon.png" alt="DE" />
+                <img style ="display: none" id="flagge" src="icon/United-Kingdom-icon.png" alt="EN" />
+            </div>
+            <p class="wechsel">Please fill out the form.</p>
+            <p class="wechsel" id="en">Bitte füllen Sie das Formular aus! </p>
+            <fieldset>
+                <legend class="wechsel">Login Details</legend>
+                <legend class="wechsel" id="en">Anmelde-Details</legend>
+                <label class="wechsel">Username* </label>
+                <label class="wechsel" id="en">Nutzername* </label>
+                <input name="Anrede"  value="" type="text"/>
+                <br />
+                <label class="wechsel">Password* </label>
+                <label class="wechsel" id="en">Passwort* </label>
+                <input id ="pw1"  type="password"/>
+                <br />
+                <label class="wechsel">retype Password* </label>
+                <label class="wechsel" id="en">Wiederholung Passwort*</label>
+                <input id ="pw2" type="password" onblur=" return pruefen(this)"/>
+                <br />
+            </fieldset>
+            <fieldset>
+                <legend class="wechsel">User Data</legend>
+                <legend class="wechsel" id="en">Nutzer Daten</legend>
+                <label class="wechsel">First Name* </label>
+                <label class="wechsel" id="en">Vorname* </label>
+                <input name="Anrede"  value="" type="text"/>
+                <br />
+                <label class="wechsel">Middle Name </label>
+                <label class="wechsel" id="en">Namenszusatz</label>
+                <input id ="pw1"  type="password"/>
+                <br />
+                <label class="wechsel">Last Name* </label>
+                <label class="wechsel" id="en">Nachname* </label>
+                <input id ="pw2" type="password" onblur=" return pruefen(this)"/>
+                <br />
+                <label>Email* </label>         
+                <input id ="pw2" type="password" onblur=" return pruefen(this)"/>
+                <br />
+            </fieldset>            
+            <button type="button" onclick="submitcheck()">Submit</button>
+            <button type="button" style ="display: none"  onclick="submitcheck()">Prüfen</button>                   
+        </form>
     </body>
 </html>
+
