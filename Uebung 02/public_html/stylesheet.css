@@ -1,0 +1,60 @@
+body {
+    background-color: #999999;
+}
+section {
+    font-family: Arial;
+    color: #330099;
+}
+
+h1{   
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial;
+    color: #330099;
+}
+
+table {
+    margin: auto;
+    empty-cells: show;
+}
+
+table td {
+    text-align: center; 
+    width: 100px;
+    height: 40px;
+    /*border: solid black 1px;*/
+}
+
+#euroamount {
+    position: relative;
+    margin-left: 15px;
+}
+
+#customer {
+    position: relative;
+    margin-left: 15px;
+}
+
+.pressme {
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+}
+
+button {
+    width: 70px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+header{
+    background-color: #666666;
+    text-align: center;
+}
+
+footer {
+    background-color: #666666;
+    text-align: center;
+}
+

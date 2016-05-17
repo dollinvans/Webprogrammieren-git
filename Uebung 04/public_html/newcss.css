@@ -1,0 +1,18 @@
+form#kontaktformular {
+	position: absolute;
+	padding: 10px;
+	width: 500px;
+	height: 170px;
+	float: left;
+	top: 11em;
+	background: #E9E9E9;
+}
+form#kontaktformular label {
+	width: 150px;
+	height: 35px;
+	margin-top: 5px;
+	float: left;
+}
+form#kontaktformular br {
+	clear: both;
+}
